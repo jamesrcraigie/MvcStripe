@@ -1,0 +1,18 @@
+﻿	@model Donatoin
+	
+</br>
+
+	<div class="text-center">
+	<h1 class="display-4">Make a donation.</h1>
+	<p>How much would you like to donate?</p>
+</div>
+
+@using (Html.BeginForm("Checkout", "Checkout", FormMethod.Get, Model))
+{
+		@Html.LabelFor(model => model.Amount)
+		<label for="Amount">Amount: £</label>
+		@Html.EditorFor(model => model.Amount)
+
+		<input type="submit" value="Submit">
+}
+
